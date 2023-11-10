@@ -70,15 +70,20 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'APIDJANGO9ISC22.wsgi.application'
-
+#$ gunicorn APIDJANGO9ISC22.wsgi:application
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql_yaph',
+        'USER': 'root',
+        'PASSWORD': 'A1vA5uOB6ECVW0M5YsDbevchuLRXwrrY',
+        'HOST': 'oregon-postgres.render.com',
+        'PORT': '5432',
+        #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -125,3 +130,12 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Servidor de correo
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'susana020801@gmail.com'
+EMAIL_HOST_PASSWORD = 'cfbu bhgd ctpr csqw'
+

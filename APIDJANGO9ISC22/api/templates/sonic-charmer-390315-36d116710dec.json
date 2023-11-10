@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sonic-charmer-390315",
+  "private_key_id": "36d116710decfb391b77daef43967b4c6c81ced6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuNjqw23Ab0htM\np4n/q4TZ17c8RVye2DiVr6QmBJMe3VWoQ48kS00ZC9WN2uPpmL8gUFPhAfgcMSzg\nKGCbI6jxLI0g8MRiDoCHti6A/C8LSKRkezCwVAq+KCBophyyfRR2gIZjwwLh71E9\n9ZWBCVU2wyTOKyhIoAE1Xp9o/xmJBgdL1S9ufNaTkB42WgUR83zI1muGykg6xv4o\nlmiy7N7xZJRwO+aNZ1MJEq6tu4fGyW/FdrMTJ5M8/iy8pG4Zlm6cSDz22HlgY+MZ\n9Xltw3DjS79fYU0u3mrLElcxqCtaQbnT0DlpYiAyCcC30eFGCsADhHOXQFjw8nC3\ntSiY/0/HAgMBAAECggEABYkmm0kVymSGRozKV0v5eDyhD3K6yzdesO74XdbmX+Qz\nnRmsekBETmfwXMYYWOtoI1w6FhvMaQTtAqB11WgwLZ23TFUqQF1qmyVgW+vniMnB\no4nAldHN15YJ1Zl1rvxHgq551sCzHj/PCpN7sTJ9OTTBPiXj7U7cSvhbQ2hbxN1V\nQNGhCzNXTULXE8JKbdjouDO0/WufBWR6bp56Y8tJhRrmSoWo4rQmQhbKbgNQ0tRq\nRsOCrWwmmj/m0KpBZ9MQUmCUSUIFVXm9rmVorSU1v4Q9xcVN/40sr+gKDyQzdCex\nhRPpOHxRSk7mLjaNYfk4w878Wt7bzs5DODIjw398tQKBgQDWPGRgN+bueiDNn3zY\njCwn+QiYBR+aJHG0uNXAIX9uci9Ym0PkW4qGeVKsop105oDhn077FwFe+jXMd+Im\nLuUe6oLR3rhrvRr69cWalswLcTafB9vdvEyyXl/11hRyqFQy94DdJzgCVUz+hvdl\nw/LWcHl6d+JSkpZHKT9ziJlGawKBgQDQLGerCBIwD9QytJFNskyET2ncdvVOI6vK\nAiwY9A5wJDBUTe/oFtBTkeUxFoUMCSDGTkGaPo1WsXrcevZFcsdrqwWwsTIc0e1d\n5AHDW75ug7liuN8j/Jjxo19Yi8t1STxNitEDk+hgiS8Fyb+sD+EePu2yJgppPrJ0\nnB9LBU3bFQKBgQCuLAErHKe54D6FDZHxd9x6TwPGm/u6VMDAvbjB8Dnq8BhAAFMs\n96NieoZVZgt/O9syE1Oh3W0261MLvbd1dZC/FsdumpTyupaRy3hwmwKeltdiaYA+\nAFWWehWoBvku0l1J5mC066qkcvcaw12lNa5a2qxYfdjZauWUSxuT8U0zqwKBgEyY\nqiRiOd75VAi8K+K8wi7E0ZzPIH953JHdrsAXvOBCUI4UhzuMeWbmfcBMGvRMv4R3\n8ueAMJ0/fId3rvnqu7nAGb3j1R6Jl58+b++j6DPdv+61O1WQce4nQMPh3CDxq4CU\nnUeFurEaiPTGQQJcbWalnOw51wbWjO8fKtx9vSHpAoGATobNhzaM7ICCodpNwLIu\nGhsXtdIs9aW9pC4UqoAHazoWePB0QT2KJWNv3qfJ/sjToZKvTx5TXFKfkpX25+Wz\n/XwRt/YoSA64Ao4kFK5rPi6+Qa3ul4FX5hVw4CzFiED4NRf9ZLoCEvksD81AffCu\npccfI9Qij0bxPP01JybJ2xA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "django@sonic-charmer-390315.iam.gserviceaccount.com",
+  "client_id": "106946539860283277005",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/django%40sonic-charmer-390315.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

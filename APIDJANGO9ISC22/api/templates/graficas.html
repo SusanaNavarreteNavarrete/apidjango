@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Gráfico de Django</title>
+</head>
+<body>
+    <section>
+        <div>
+            <canvas id="grafico_pregunta1"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta2"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta3"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta4"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta5"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta6"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta7"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta8"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta9"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <canvas id="grafico_pregunta10"></canvas>
+        </div>
+    </section>
+
+    <!-- Repite esta estructura para las otras preguntas -->
+    
+    <script>
+        // Código para el primer gráfico (pregunta1)
+        const ctx1 = document.getElementById('grafico_pregunta1').getContext('2d');
+        const labels1 = {{ labels_pregunta1|safe }};
+        const data1 = {{ data_pregunta1|safe }};
+        new Chart(ctx1, {
+            type: 'line', //sankey
+            data: {
+                labels: labels1,
+                datasets: [{
+                    label: '¿Qué tipo de información adicional te gustaría ver para cada componente?',
+                    fill:true,
+                    data: data1,
+                    backgroundColor: 'rgba(128,0,0, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(165,42,42, 1)',  //
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Código para el segundo gráfico (pregunta2)
+        const ctx2 = document.getElementById('grafico_pregunta2').getContext('2d');
+        const labels2 = {{ labels_pregunta2|safe }};
+        const data2 = {{ data_pregunta2|safe }};
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: labels2,
+                datasets: [{
+                    label: '¿Qué es lo mas importante para usted en un catalogo de componentes electrónicos?',
+                    fill:true,
+                    data: data2,
+                    backgroundColor: 'rgba(0,0,128, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(72,209,204, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta3)
+        const ctx3 = document.getElementById('grafico_pregunta3').getContext('2d');
+        const labels3 = {{ labels_pregunta3|safe }};
+        const data3 = {{ data_pregunta3|safe }};
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: labels3,
+                datasets: [{
+                    label: '¿Qué método de navegación refieres para encontrar componentes específicos?',
+                    fill:true,
+                    data: data3,
+                    backgroundColor: 'rgba(128,0,0, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(165,42,42, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta4)
+        const ctx4 = document.getElementById('grafico_pregunta4').getContext('2d');
+        const labels4 = {{ labels_pregunta4|safe }};
+        const data4 = {{ data_pregunta4|safe }};
+        new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: labels4,
+                datasets: [{
+                    label: '¿Cómo le gustaría que se organizara el catalogo?',
+                    fill:true,
+                    data: data4,
+                    backgroundColor: 'rgba(0,0,128, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(72,209,204, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta5)
+        const ctx5 = document.getElementById('grafico_pregunta5').getContext('2d');
+        const labels5 = {{ labels_pregunta5|safe }};
+        const data5 = {{ data_pregunta5|safe }};
+        new Chart(ctx5, {
+            type: 'line',
+            data: {
+                labels: labels5,
+                datasets: [{
+                    label: '¿Qué funcionalidad adicional seria valiosa para facilitar la toma de decisiones de compra? ',
+                    fill:true,
+                    data: data5,
+                    backgroundColor: 'rgba(128,0,0, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(165,42,42, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta6)
+        const ctx6 = document.getElementById('grafico_pregunta6').getContext('2d');
+        const labels6 = {{ labels_pregunta6|safe }};
+        const data6 = {{ data_pregunta6|safe }};
+        new Chart(ctx6, {
+            type: 'line',
+            data: {
+                labels: labels6,
+                datasets: [{
+                    label: '¿Qué tan probable es que compre componentes electrónicos de un catalogo digital?',
+                    fill:true,
+                    data: data6,
+                    backgroundColor: 'rgba(0,0,128, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(72,209,204, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta7)
+        const ctx7 = document.getElementById('grafico_pregunta7').getContext('2d');
+        const labels7 = {{ labels_pregunta7|safe }};
+        const data7 = {{ data_pregunta7|safe }};
+        new Chart(ctx7, {
+            type: 'line',
+            data: {
+                labels: labels7,
+                datasets: [{
+                    label: '¿Qué estilo de diseño preferiría para el catalogo?',
+                    fill:true,
+                    data: data7,
+                    backgroundColor: 'rgba(128,0,0, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(165,42,42, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta8)
+        const ctx8 = document.getElementById('grafico_pregunta8').getContext('2d');
+        const labels8 = {{ labels_pregunta8|safe }};
+        const data8 = {{ data_pregunta8|safe }};
+        new Chart(ctx8, {
+            type: 'line',
+            data: {
+                labels: labels8,
+                datasets: [{
+                    label: '¿Qué es lo mas importante para ti al comprar componentes electrónicos?',
+                    fill:true,
+                    data: data8,
+                    backgroundColor: 'rgba(0,0,128, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(72,209,204, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta9)
+        const ctx9 = document.getElementById('grafico_pregunta9').getContext('2d');
+        const labels9 = {{ labels_pregunta9|safe }};
+        const data9 = {{ data_pregunta9|safe }};
+        new Chart(ctx9, {
+            type: 'line',
+            data: {
+                labels: labels9,
+                datasets: [{
+                    label: '¿Qué tipos de recursos adicionales consideras útiles para complementar la información de los componentes?',
+                    fill:true,
+                    data: data9,
+                    backgroundColor: 'rgba(128,0,0, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(165,42,42, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Código para el segundo gráfico (pregunta10)
+        const ctx10 = document.getElementById('grafico_pregunta10').getContext('2d');
+        const labels10 = {{ labels_pregunta10|safe }};
+        const data10 = {{ data_pregunta10|safe }};
+        new Chart(ctx10, {
+            type: 'line',
+            data: {
+                labels: labels10,
+                datasets: [{
+                    label: '¿Nos permitirías mandar nuevas encuestas a tu correo  en el futuro?',
+                    fill:true,
+                    data: data10,
+                    backgroundColor: 'rgba(0,0,128, 0.3)',  // Cambia el color aquí
+                    borderColor: 'rgba(72,209,204, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Repite este código para los otros gráficos
+    </script>
+</body>
+</html>
+
+
