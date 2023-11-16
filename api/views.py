@@ -236,35 +236,3 @@ class Graficas(APIView):
             # Agrega aquí las variables para las otras preguntas
         })
         
-from django.shortcuts import render
-from django.http import JsonResponse
-from django.views import View
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
-import openai
-
-@method_decorator(csrf_exempt, name='dispatch')
-class ObtenerRespuestaChatGPTView(View):
-    template_name = 'chatgpt/index.html'
-
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name)
-
-    def post(self, request, *args, **kwargs):
-        # Obtén los datos del cuerpo de la solicitud POST
-        datos = request.POST.get('datos')
-
-        # Configura la clave de API de ChatGPT
-        openai.api_key = 'tu_clave_de_api_de_chatgpt'
-
-        # Realiza una solicitud a la API de ChatGPT
-        respuesta = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",  # Puedes ajustar el modelo según tus necesidades
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": datos},
-            ]
-        )
-
-        # Devuelve la respuesta al cliente
-        return JsonResponse({'respuesta': respuesta['choices'][0]['message']['content']})

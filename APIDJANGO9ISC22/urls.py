@@ -31,7 +31,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='loginview'),
     path('procesar_registro/', ProcesarRegistroView.as_view(), name='procesar_registro'),
     path('graficas/', Graficas.as_view(), name='graficas'),
-    path('', ObtenerRespuestaChatGPTView.as_view(), name='obtener_respuesta_chatgpt'),
+    #path('', ObtenerRespuestaChatGPTView.as_view(), name='obtener_respuesta_chatgpt'),
 
 ]
   
