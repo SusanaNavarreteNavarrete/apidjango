@@ -237,6 +237,34 @@ class Graficas(APIView):
         })
 
 
+# en views.py
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import openai
+
+@csrf_exempt
+def obtener_respuesta_chatgpt(request):
+    if request.method == 'POST':
+        # Obtén los datos del cuerpo de la solicitud POST
+        datos = request.POST.get('datos')
+
+        # Configura la clave de API de ChatGPT
+        openai.api_key = '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'
+
+        # Realiza una solicitud a la API de ChatGPT
+        respuesta = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",  # Puedes ajustar el modelo según tus necesidades
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": datos},
+            ]
+        )
+
+        # Devuelve la respuesta al cliente
+        return JsonResponse({'respuesta': respuesta['choices'][0]['message']['content']})
+
+    return JsonResponse({'error': 'Método no permitido'}, status=405)
+
 
 
 
