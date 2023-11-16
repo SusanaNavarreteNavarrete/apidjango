@@ -264,9 +264,7 @@ def obtener_respuesta_chatgpt(request):
         return JsonResponse({'respuesta': respuesta['choices'][0]['message']['content']})
 
     return JsonResponse({'error': 'Método no permitido'}, status=405)
-#..........................................
-import sys
-print(sys.path)
+
 
 
 
