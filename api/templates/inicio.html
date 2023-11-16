@@ -1,28 +1,24 @@
 {% load static %}
-<!-- catalogo.html -->
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'inicio.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Componentes Electrónicos</title>
+    <title>Página de Inicio</title>
 </head>
 <body>
-
-    <h1>Catálogo de Componentes Electrónicos</h1>
-
-    <form method="get" action="{% url 'catalogo' %}">
-        {{ form.as_p }}
-        <button type="submit">Buscar</button>
-    </form>
-
-    {% for componente in componentes %}
-        <div class="componente">
-            <h2>{{ componente.nombre }}</h2>
-            <img src="{{ componente.imagen.url }}" alt="{{ componente.nombre }}">
-            <p>{{ componente.descripcion }}</p>
-        </div>
-    {% endfor %}
+    <h1>Bienvenido a nuestra Página de Inicio</h1>
+    <p>¡Hola! Esta es nuestra página de inicio.</p>
+</body>
+</html>
 
 </body>
 </html>
