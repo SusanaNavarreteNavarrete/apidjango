@@ -1,60 +1,31 @@
 {% load static %}
-!<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <title>Catálogo de Componentes Electrónicos</title>
-        <style>
-            /* Estilos básicos para mejorar la presentación */
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-            }
-            h1 {
-                color: #333;
-            }
-            ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            li {
-                margin-bottom: 20px;
-                border: 1px solid #ccc;
-                padding: 10px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Catálogo de Componentes Electrónicos</h1>
-        <ul>
-            <li>
-                <h2>Resistor</h2>
-                <p>Descripción del resistor. Resistencia: 10 kΩ.</p>
-                <img src="resistor.jpg" alt="Resistor">
-            </li>
-            <li>
-                <h2>LED</h2>
-                <p>Descripción del LED. Color: Rojo.</p>
-                <img src="led.jpg" alt="LED">
-            </li>
-            <li>
-                <h2>Transistor</h2>
-                <p>Descripción del transistor. Tipo: NPN.</p>
-                <img src="transistor.jpg" alt="Transistor">
-            </li>
-            <!-- Agrega más elementos según sea necesario -->
-        </ul>
-        <script src="" async defer></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'inicio.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catálogo de Componentes Electrónicos</h1>
+    <ul>
+        <li>
+            <h2>Resistor</h2>
+            <p>Descripción del resistor. Resistencia: 10 kΩ.</p>
+            <img src="resistor.jpg" alt="Resistor">
+        </li>
+        <li>
+            <h2>LED</h2>
+            <p>Descripción del LED. Color: Rojo.</p>
+            <img src="led.jpg" alt="LED">
+        </li>
+        <li>
+            <h2>Transistor</h2>
+            <p>Descripción del transistor. Tipo: NPN.</p>
+            <img src="transistor.jpg" alt="Transistor">
+        </li>
+        <!-- Agrega más elementos según sea necesario -->
+    </ul>
+</body>
 </html>
