@@ -140,7 +140,7 @@ EMAIL_HOST_USER = 'susana020801@gmail.com'
 EMAIL_HOST_PASSWORD = 'cfbu bhgd ctpr csqw'
 
 # en settings.py
-OPENAI_API_KEY = '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'
+#OPENAI_API_KEY = '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'
 
 
 
