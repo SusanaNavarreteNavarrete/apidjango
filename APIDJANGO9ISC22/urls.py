@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import Graficas, Home, LoginView, ObtenerRespuestaChatGPTView
+from api.views import Graficas, Home, LoginView, obtener_respuesta_chatgpt
 from api.views import Login
 from api.views import Form
 from api.views import Inicio
@@ -31,7 +31,6 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='loginview'),
     path('procesar_registro/', ProcesarRegistroView.as_view(), name='procesar_registro'),
     path('graficas/', Graficas.as_view(), name='graficas'),
-    path('', ObtenerRespuestaChatGPTView.as_view(), name='obtener_respuesta_chatgpt'),
-
+    path('obtener-respuesta-chatgpt/', obtener_respuesta_chatgpt, name='obtener_respuesta_chatgpt'),
 ]
   
