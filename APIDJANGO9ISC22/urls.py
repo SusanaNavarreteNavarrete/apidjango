@@ -24,7 +24,7 @@ from api.views import ProcesarRegistroView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Home.as_view(),name='index'),
+    path('index.html',Home.as_view(),name='index'),
     path('login.html',Login.as_view(),name='login'),
     path('form.html',Form.as_view(),name='form'),
     path('inicio.html',Inicio.as_view(),name='inicio'),
