@@ -3,72 +3,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'inicio.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <title>Información de Componentes Electrónicos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #800000;
-        }
-    </style>
+    <title>ChatGPT - Componentes Electrónicos</title>
 </head>
 <body>
 
-    <h1>Información de Componentes Electrónicos</h1>
+    <h1>ChatGPT - Componentes Electrónicos</h1>
 
-    <section id="resistor-section">
-        <h2>Resistor</h2>
-        <p id="resistor-info"></p>
-    </section>
+    <form id="formularioChat">
+        {% csrf_token %}
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="mensaje" name="mensaje" required>
+        <button type="button" onclick="enviarSolicitud()">Enviar</button>
+    </form>
 
-    <section id="condensador-section">
-        <h2>Condensador</h2>
-        <p id="condensador-info"></p>
-    </section>
-
-    <section id="transistor-section">
-        <h2>Transistor</h2>
-        <p id="transistor-info"></p>
-    </section>
+    <div id="respuestaChat"></div>
 
     <script>
-        // Agrega tu código JavaScript para interactuar con la API de ChatGPT aquí
-        async function obtenerInformacion(componente, idElemento) {
-            const respuesta = await fetch('https://api.openai.com/v1/chat/completions', {
+        function enviarSolicitud() {
+            var mensaje = document.getElementById("mensaje").value;
+
+            // Realiza una solicitud POST a tu vista Django
+            fetch('', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer TUYA_API_KEY', // Reemplaza con tu clave de API de ChatGPT
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': document.getElementsByName('csrfmiddlewaretoken')[0].value
                 },
-                body: JSON.stringify({
-                    model: 'gpt-3.5-turbo',
-                    messages: [
-                        {role: 'system', content: 'You are a helpful assistant.'},
-                        {role: 'user', content: `Cuéntame sobre el ${componente}.`}
-                    ],
-                }),
+                body: 'datos=' + encodeURIComponent(mensaje)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Muestra la respuesta en el elemento con id "respuestaChat"
+                document.getElementById("respuestaChat").innerHTML = '<p>Respuesta: ' + data.respuesta + '</p>';
             });
-
-            const datos = await respuesta.json();
-            document.getElementById(idElemento).innerText = datos.choices[0].message.content;
         }
-
-        // Llama a la función para obtener información sobre los componentes
-        obtenerInformacion('resistor', 'resistor-info');
-        obtenerInformacion('condensador', 'condensador-info');
-        obtenerInformacion('transistor', 'transistor-info');
     </script>
-</html>
 
 </body>
 </html>
