@@ -26,7 +26,7 @@ class Inicio (APIView):
     template_inicio = 'inicio.html',
     def get(self, request):
         return render(request,self.template_inicio)
-    
+
 class ProcesarRegistroView(APIView):
     template_name = 'registro.html'
 
