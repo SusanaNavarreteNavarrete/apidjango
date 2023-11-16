@@ -3,42 +3,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'inicio.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT - Componentes Electrónicos</title>
+    <title>Document</title>
 </head>
 <body>
-
-    <h1>ChatGPT - Componentes Electrónicos</h1>
-
-    <form id="formularioChat">
-        {% csrf_token %}
-        <label for="mensaje">Mensaje:</label>
-        <input type="text" id="mensaje" name="mensaje" required>
-        <button type="button" onclick="enviarSolicitud()">Enviar</button>
-    </form>
-
-    <div id="respuestaChat"></div>
-
-    <script>
-        function enviarSolicitud() {
-            var mensaje = document.getElementById("mensaje").value;
-
-            // Realiza una solicitud POST a tu vista Django
-            fetch('', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': document.getElementsByName('csrfmiddlewaretoken')[0].value
-                },
-                body: 'datos=' + encodeURIComponent(mensaje)
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Muestra la respuesta en el elemento con id "respuestaChat"
-                document.getElementById("respuestaChat").innerHTML = '<p>Respuesta: ' + data.respuesta + '</p>';
-            });
-        }
-    </script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido a nuestra Página de Inicio</h1>
+    <p>¡Hola! Esta es nuestra página de inicio.</p>
+</body>
+</html>
 
 </body>
 </html>
