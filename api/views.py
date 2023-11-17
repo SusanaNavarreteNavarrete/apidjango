@@ -13,7 +13,7 @@ from django.contrib.auth import authenticate, login
 class Home (APIView):
     template_name = 'index.html',
     def get(self, request):
-        return render(request,self.template_name)
+        return render(request,self.template_index)
 class Login (APIView):
     template_login = 'login.html',
     def get(self, request):
