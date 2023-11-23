@@ -140,6 +140,10 @@ EMAIL_HOST_USER = 'susana020801@gmail.com'
 EMAIL_HOST_PASSWORD = 'cfbu bhgd ctpr csqw'
 
 # en settings.py
+# settings.py
+
+GOOGLE_API_KEY = 'AIzaSyBohlO0mapr3UiV5R2ARrk5M12TQBNCagI'
+
 #OPENAI_API_KEY = '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'
 
 

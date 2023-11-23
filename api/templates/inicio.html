@@ -8,24 +8,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Catálogo de Componentes Electrónicos</h1>
-    <ul>
-        <li>
-            <h2>Resistor</h2>
-            <p>Descripción del resistor. Resistencia: 10 kΩ.</p>
-            <img src="resistor.jpg" alt="Resistor">
-        </li>
-        <li>
-            <h2>LED</h2>
-            <p>Descripción del LED. Color: Rojo.</p>
-            <img src="led.jpg" alt="LED">
-        </li>
-        <li>
-            <h2>Transistor</h2>
-            <p>Descripción del transistor. Tipo: NPN.</p>
-            <img src="transistor.jpg" alt="Transistor">
-        </li>
-        <!-- Agrega más elementos según sea necesario -->
-    </ul>
+    <h1>Componentes Electrónicos</h1>
+
+    <div id="componentList">
+        {% for component in components %}
+            <div class="component" onclick="showInfo('{{ component.name }}')">
+                <img src="{% static 'component_images/' %}{{ component.image }}" alt="{{ component.name }}">
+                <p>{{ component.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="infoContainer">
+        <h2>Información del Componente</h2>
+        <div id="componentInfo"></div>
+    </div>
+
+    <script>
+        function showInfo(componentName) {
+            // Realiza la solicitud a la API de MediaWiki
+            fetch(`/wikipedia-search/?q=${encodeURIComponent(componentName)}`)
+                .then(response => response.json())
+                .then(data => displayInfo(data.results[0]))
+                .catch(error => console.error('Error en la búsqueda:', error));
+        }
+
+        function displayInfo(result) {
+            var infoContainer = document.getElementById('componentInfo');
+            infoContainer.innerHTML = `<p>${result.snippet}</p>`;
+        }
+    </script>
 </body>
 </html>
