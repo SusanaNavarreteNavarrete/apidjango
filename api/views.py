@@ -236,7 +236,32 @@ class Graficas(APIView):
             # Agrega aquí las variables para las otras preguntas
         })
 
+from django.shortcuts import render
+from django.views import View
+import wikipedia
 
+class ComponentDetailView(View):
+    template_name = 'component_detail.html'
+
+    def get(self, request, *args, **kwargs):
+        component_name = kwargs.get('component_name')
+
+        try:
+            page_summary = wikipedia.summary(component_name, sentences=1)
+            description_wikipedia = page_summary
+        except wikipedia.exceptions.DisambiguationError as e:
+            # En caso de ambigüedad en la búsqueda, manejarlo de acuerdo a tus necesidades
+            description_wikipedia = f"Error de ambigüedad: {e}"
+        except wikipedia.exceptions.PageError:
+            description_wikipedia = "No se encontró información en Wikipedia."
+
+        context = {
+            'nombre_componente': component_name,
+            'descripcion_wikipedia': description_wikipedia,
+            # Otros datos necesarios para tu plantilla
+        }
+
+        return render(request, self.template_name, context)
 
 
 

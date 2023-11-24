@@ -3,40 +3,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'inicio.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo de Componentes Electrónicos</title>
 </head>
 <body>
-    <h1>Componentes Electrónicos</h1>
+    <h1>Catálogo de Componentes Electrónicos</h1>
 
-    <div id="componentList">
-        {% for component in components %}
-            <div class="component" onclick="showInfo('{{ component.name }}')">
-                <img src="{% static 'component_images/' %}{{ component.image }}" alt="{{ component.name }}">
-                <p>{{ component.name }}</p>
-            </div>
-        {% endfor %}
+    <div class="product">
+        <h2>Arduino Uno</h2>
+        <a href="{% url 'component_detail' component_name='arduino-uno' %}">
+            <img src='img/arduinouno.jpg' alt="Arduino Uno">
+        </a>
     </div>
 
-    <div id="infoContainer">
-        <h2>Información del Componente</h2>
-        <div id="componentInfo"></div>
+
+    <div class="product">
+        <h2>Protoboard</h2>
+        <a href="{% url 'component_detail' component_name='protoboard' %}">
+            <img src= 'img/arduinouno.jpg'  alt="Protoboard">
+        </a>
     </div>
 
-    <script>
-        function showInfo(componentName) {
-            // Realiza la solicitud a la API de MediaWiki
-            fetch(`/wikipedia-search/?q=${encodeURIComponent(componentName)}`)
-                .then(response => response.json())
-                .then(data => displayInfo(data.results[0]))
-                .catch(error => console.error('Error en la búsqueda:', error));
-        }
+    <div class="product">
+        <h2>Arduino Mega</h2>
+        <a href="{% url 'component_detail' component_name='arduino-mega' %}">
+            <img src='img/arduinouno.jpg' alt="Arduino Mega">
+        </a>
+    </div>
 
-        function displayInfo(result) {
-            var infoContainer = document.getElementById('componentInfo');
-            infoContainer.innerHTML = `<p>${result.snippet}</p>`;
-        }
-    </script>
+    <div class="product">
+        <h2>pic 16f877a</h2>
+        <a href="{% url 'component_detail' component_name='pic microcontroller' %}">
+            <img src='img/arduinouno.jpg'  alt="PIC 16F877A">
+        </a>
+    </div>
+
+    <div class="product">
+        <h2>sensor hc-sr04</h2>
+        <a href="{% url 'component_detail' component_name='ultrasonic sensor' %}">
+            <img src= 'img/arduinouno.jpg'  alt="Sensor HC-SR04">
+        </a>
+    </div>
+
+    <!-- Otros productos... -->
 </body>
 </html>
