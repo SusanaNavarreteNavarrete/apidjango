@@ -78,11 +78,17 @@ WSGI_APPLICATION = 'APIDJANGO9ISC22.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgresql_yaph',
-        'USER': 'root',
-        'PASSWORD': 'A1vA5uOB6ECVW0M5YsDbevchuLRXwrrY',
-        'HOST': 'oregon-postgres.render.com',
-        'PORT': '5432',
+        'NAME': 'formulario',
+        'USER': 'postgres',
+        'PASSWORD': 'susana',
+        'HOST': 'localhost',
+        'PORT': '',
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'postgresql_yaph',
+        #'USER': 'root',
+        #'PASSWORD': 'A1vA5uOB6ECVW0M5YsDbevchuLRXwrrY',
+        #'HOST': 'oregon-postgres.render.com',
+        #'PORT': '5432',
         #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
