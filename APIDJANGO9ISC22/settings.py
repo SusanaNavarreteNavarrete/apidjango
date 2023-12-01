@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i9))y^(jy#9&9$18+!9mdlsgw3z3&wqc0rl^ye^#_b$z^p3u$5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['catalogo9isc22.onrender.com',]
+ALLOWED_HOSTS = ['catalogo9isc22.onrender.com','*']
 
 
 # Application definition
@@ -77,19 +77,18 @@ WSGI_APPLICATION = 'APIDJANGO9ISC22.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'formulario',
-        'USER': 'postgres',
-        'PASSWORD': 'susana',
-        'HOST': 'localhost',
-        'PORT': '',
         #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'postgresql_yaph',
-        #'USER': 'root',
-        #'PASSWORD': 'A1vA5uOB6ECVW0M5YsDbevchuLRXwrrY',
-        #'HOST': 'oregon-postgres.render.com',
-        #'PORT': '5432',
-        #'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME': 'formulario',
+        #'USER': 'postgres',
+        #'PASSWORD': 'susana',
+        #'HOST': 'localhost',
+        #'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql_yaph',
+        'USER': 'root',
+        'PASSWORD': 'A1vA5uOB6ECVW0M5YsDbevchuLRXwrrY',
+        'HOST': 'oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 
