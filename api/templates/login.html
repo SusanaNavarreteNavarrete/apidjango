@@ -15,10 +15,10 @@
             {% csrf_token %}
             <input type="text" name="user" placeholder="Username" required="required" />
             <input type="password" name="password" placeholder="Password" required="required" />
-            <center><button type="submit" class="btn btn-primary btn-block btn-large">Acceder</button>
-                <li><a href="form.html">Registro</a>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Acceder</button>
+                <a href="form.html">Registro</a>
                     <br>
-                <li><a href="">Inicio</a></li>
+                <a href="">Inicio</a>
             {% if error_message %}
                 <p>{{ error_message }}</p>
             {% endif %}
