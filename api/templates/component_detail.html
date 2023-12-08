@@ -9,12 +9,13 @@
 <body>
     <h1>Detalles de {{ nombre_componente }}</h1>
 
-    <img src='img/arduinouno.jpg' alt="{{ nombre_componente }}">
+    <img src='Arduino_Uno_-_R3.jpg' alt="{{ nombre_componente }}">
 
     <p>Descripción: {{ descripcion_wikipedia }}</p>
 
     <p>Precio: $XX.XX</p>
-
+    <button onclick="enviarCorreo('Arduino Uno')">Enviar Información</button>
     <a href="{% url 'inicio' %}">inicio</a>
+    
 </body>
 </html>

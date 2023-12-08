@@ -3,25 +3,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'inicio.css'%}">
+    <link rel="stylesheet" href="{% static 'inicio.css'%}" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Componentes Electrónicos</title>
 </head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2e5186;
+        text-align: center;
+    }
+    
+    h1 {
+        color: #333;
+        margin-top: 30px;
+    }
+    
+    .product {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        padding: 20px;
+        display: inline-block;
+        text-align: left;
+        transition: transform 0.3s;
+    }
+    
+    .product:hover {
+        transform: translateY(-5px);
+    }
+    
+    .product h2 {
+        color: #333;
+        font-size: 1.5em;
+    }
+    
+    .product img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+        text-align: center;
+        padding: 0;
+        list-style: none;
+        background-color: #6e95be;
+        margin: 0;
+        border-radius: 4px;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+    
+    nav a:hover {
+        background-color: #007bff;
+    }
+</style>
 <body>
     <h1>Catálogo de Componentes Electrónicos</h1>
 
     <div class="product">
         <h2>Arduino Uno</h2>
         <a href="{% url 'component_detail' component_name='arduino-uno' %}">
-            <img src='img/arduinouno.jpg' alt="Arduino Uno">
+            <img src='arduino-uno.jpg' alt="Arduino Uno">
         </a>
     </div>
-
+    
 
     <div class="product">
         <h2>Protoboard</h2>
         <a href="{% url 'component_detail' component_name='protoboard' %}">
-            <img src= 'img/arduinouno.jpg'  alt="Protoboard">
+            <img src= 'Arduino_Uno.jpg'  alt="Protoboard">
         </a>
     </div>
 
@@ -31,7 +97,6 @@
             <img src='img/arduinouno.jpg' alt="Arduino Mega">
         </a>
     </div>
-
     <div class="product">
         <h2>pic 16f877a</h2>
         <a href="{% url 'component_detail' component_name='pic microcontroller' %}">
@@ -45,7 +110,11 @@
             <img src= 'img/arduinouno.jpg'  alt="Sensor HC-SR04">
         </a>
     </div>
-
+    <nav>
+        <ul>
+            <li><a href="login.html">Inicio</a></li>
+        </ul>
+    </nav>
     <!-- Otros productos... -->
 </body>
 </html>
