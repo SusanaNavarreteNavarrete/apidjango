@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['catalogo9isc22.onrender.com','*']
 INSTALLED_APPS = [
     'rest_framework',
     'api',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
