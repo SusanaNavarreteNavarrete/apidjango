@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'forms.css'%}" text="text/css">
+    <link rel="stylesheet" href="{% static 'forms.css'%}" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
@@ -22,10 +22,10 @@
         <label for="confirm_password">Confirmar Contraseña:</label>
         <input type="password" id="confirm_password" name="confirm_password" required><br>
 
-       <center> <button type="submit" value="Registrarse">Registrarse</button></center>
+        <button type="submit" value="Registrarse">Registrarse</button>
        <form action='/login/' method='POST'>
         
-       <center><a type="submit" href="login.html" value="Regresar"> Inicio</a>
+       <a type="submit" href="login.html" value="Regresar"> Inicio</a>
     </form>
 </body>
 </html>
