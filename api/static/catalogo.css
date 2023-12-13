@@ -13,8 +13,8 @@ h1 {
 
 .product {
     background-color: #fff;
-    width: 400px; /* Puedes ajustar el valor según tus necesidades */
-    height: 300px;
+    width: 300px; /* Puedes ajustar el valor según tus necesidades */
+    height: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 20px;
@@ -66,7 +66,7 @@ nav a:hover {
 }
 
 .imagen{ 
-    width: 300px; /* Puedes ajustar el valor según tus necesidades */
+    width: 200px; /* Puedes ajustar el valor según tus necesidades */
     height: 200px; /* Puedes ajustar el valor según tus necesidades */
     object-fit: cover;
 }
