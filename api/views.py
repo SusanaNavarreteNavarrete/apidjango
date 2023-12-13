@@ -262,6 +262,18 @@ class ComponentDetailView(View):
         }
 
         return render(request, self.template_name, context)
+    
+    
+from django.http import FileResponse
+from django.views.generic.base import View
+from django.conf import settings
+import os
+
+class ImagenView(View):
+    def get(self, request, imagen):
+        imagen_path = os.path.join(settings.BASE_DIR, 'APIDJANGO9ISC22', 'imagenes', imagen)
+        return FileResponse(open(imagen_path, 'rb'), content_type='image/jpeg')
+
 
 
 
