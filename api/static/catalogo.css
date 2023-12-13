@@ -13,8 +13,6 @@ h1 {
 
 .product {
     background-color: #fff;
-    width: 300px; /* Puedes ajustar el valor según tus necesidades */
-    height: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 20px;
