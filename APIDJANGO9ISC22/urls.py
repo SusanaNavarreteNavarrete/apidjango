@@ -20,7 +20,7 @@ from api.views import Login
 from api.views import Form
 from api.views import Inicio
 from api.views import ProcesarRegistroView
-from .views import ImagenView
+
 
 
 urlpatterns = [
@@ -33,6 +33,5 @@ urlpatterns = [
     path('procesar_registro/', ProcesarRegistroView.as_view(), name='procesar_registro'),
     path('graficas/', Graficas.as_view(), name='graficas'),
     path('componente/<str:component_name>/', ComponentDetailView.as_view(), name='component_detail'),
-    path('imagenes/<str:imagen>/', ImagenView.as_view(), name='imagen_view'),
 ]
   
