@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'prue.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'catalogo.css'%}" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Componentes Electrónicos</title>
 </head>
@@ -64,6 +64,13 @@
         <h2>Transistor FET</h2>
         <a href="{% url 'component_detail' component_name='Field-effect transistor' %}">
             <img class="imagen" src="{% static 'imagenes/Transistor de efecto de campo.jpg' %}" alt="Transistor de efecto de campo">
+        </a>
+    </div>
+
+    <div class="product">
+        <h2>Circuito integrado</h2>
+        <a href="{% url 'component_detail' component_name='Integrated circuit' %}">
+            <img class="imagen" src="{% static 'imagenes/Circuito integrado.jpg' %}" alt="Circuito integrado">
         </a>
     </div>
 
