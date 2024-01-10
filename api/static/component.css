@@ -7,14 +7,3 @@ body {
     font-family: Arial, sans-serif; /* Tipo de fuente para el texto en la página */
     color: #333; /* Color del texto */
   }
-
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #ff6b6b;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1em;
-}
