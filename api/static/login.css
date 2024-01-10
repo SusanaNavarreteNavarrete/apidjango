@@ -74,10 +74,18 @@ button {
 
 /* Estilos para los enlaces */
 a {
-    color: #007bff;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid #4CAF50;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
