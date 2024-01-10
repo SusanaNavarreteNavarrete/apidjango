@@ -75,7 +75,8 @@ button {
 /* Estilos para los enlaces */
 a {
     text-decoration: none;
-    color: #007bff;
+    text-align: center;
+    color: #067cfa;
     font-weight: bold;
     margin-top: 20px;
     display: inline-block;
@@ -86,6 +87,6 @@ a {
   }
   
   a:hover {
-    background-color: #1e1f1e;
+    background-color: #234dd6;
     color: white;
   }
