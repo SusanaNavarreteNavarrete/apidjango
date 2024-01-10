@@ -7,4 +7,14 @@ body {
     font-family: Arial, sans-serif; /* Tipo de fuente para el texto en la página */
     color: #333; /* Color del texto */
   }
-  
+  .boton {
+    display: block;
+    margin: 20px auto; /* Ajusta el margen superior e inferior para centrar verticalmente */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
