@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import ComponentDetailView, Graficas, Home, LoginView
+from api.views import ComponentDetailView, Graficas, Home, LoginView, descargar_archivo
 from api.views import Login
 from api.views import Form
 from api.views import Inicio
@@ -33,5 +33,6 @@ urlpatterns = [
     path('procesar_registro/', ProcesarRegistroView.as_view(), name='procesar_registro'),
     path('graficas/', Graficas.as_view(), name='graficas'),
     path('componente/<str:component_name>/', ComponentDetailView.as_view(), name='component_detail'),
+    path('descargar/<str:nombre_componente>/', descargar_archivo, name='descargar_archivo'),
 ]
   

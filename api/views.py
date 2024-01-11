@@ -263,6 +263,37 @@ class ComponentDetailView(View):
 
         return render(request, self.template_name, context)
     
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def detalles_componente(request, nombre_componente):
+    # Lógica para obtener la ruta del archivo basada en nombre_componente
+    ruta_archivo = f'RUTA/AL/ARCHIVO/{nombre_componente}.pdf'  # Reemplaza con la ruta real de tu archivo
+
+    # Otras lógicas para obtener datos adicionales como descripción y precio
+
+    return render(request, 'detalles_componente.html', {
+        'nombre_componente': nombre_componente,
+        'ruta_archivo': ruta_archivo,
+        'descripcion_wikipedia': 'Tu descripción aquí',  # Reemplaza con la descripción real
+        'precio': 'XX.XX',  # Reemplaza con el precio real
+    })
+
+def descargar_archivo(request, nombre_componente):
+    # Lógica para obtener la ruta del archivo basada en nombre_componente
+    ruta_archivo = f'RUTA/AL/ARCHIVO/{nombre_componente}.pdf'  # Reemplaza con la ruta real de tu archivo
+
+    # Abre el archivo y crea una respuesta de descarga
+    with open(ruta_archivo, 'rb') as archivo:
+        response = HttpResponse(archivo.read(), content_type='application/pdf')
+
+        # Configura el encabezado para la descarga del archivo
+        response['Content-Disposition'] = f'attachment; filename="{nombre_componente}.pdf"'
+
+        return response
+
+
+    
     
 
 
