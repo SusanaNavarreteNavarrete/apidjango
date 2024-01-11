@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'grafica.css'%}" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Gráfico de Django</title>
@@ -92,7 +94,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+                responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
 
@@ -118,7 +124,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta3)
@@ -143,7 +153,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta4)
@@ -168,7 +182,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta5)
@@ -193,7 +211,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta6)
@@ -218,7 +240,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta7)
@@ -243,7 +269,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta8)
@@ -268,7 +298,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta9)
@@ -293,7 +327,11 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
         // Código para el segundo gráfico (pregunta10)
@@ -318,12 +356,20 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 200, // Ajusta según tu preferencia
+            height: 150, // Ajusta según tu preferencia
             }
         });
-
         // Repite este código para los otros gráficos
     </script>
+    <nav>
+        <ul>
+            <li><a href="https://catalogo9isc22.onrender.com/">Inicio</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
 
