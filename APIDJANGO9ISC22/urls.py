@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import ComponentDetailView, Graficas, Home, LoginView, descargar_archivo
+from api.views import ComponentDetailView, Graficas, Home, LoginView
 from api.views import Login
 from api.views import Form
 from api.views import Inicio
