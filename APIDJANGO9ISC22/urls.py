@@ -33,6 +33,5 @@ urlpatterns = [
     path('procesar_registro/', ProcesarRegistroView.as_view(), name='procesar_registro'),
     path('graficas/', Graficas.as_view(), name='graficas'),
     path('componente/<str:component_name>/', ComponentDetailView.as_view(), name='component_detail'),
-    path('descargar/<str:nombre_componente>/', descargar_archivo, name='descargar_archivo'),
 ]
   
