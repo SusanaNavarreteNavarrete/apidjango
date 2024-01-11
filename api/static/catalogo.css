@@ -9,7 +9,7 @@ h1 {
     text-align: center;
     color: #333;
     padding: 20px;
-    background: linear-gradient(to bottom, #4CAF50, #45a049);
+    background: linear-gradient(45deg, #3498db, #27ae60);
     color: white;
     margin-bottom: 0;
 }
@@ -67,15 +67,32 @@ nav li {
 }
 
 a {
+    display: inline-block;
+    margin-top: 10px;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-    padding: 10px 20px;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
 a:hover {
-    color: #4CAF50;
+    background: linear-gradient(45deg, #3498db, #27ae60);
+}
+.inicio{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color:#796cd3;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+.inicio:hover{
+    background: linear-gradient(45deg, #3498db, #27ae60);
 }
 .imagen{ 
     width: 200px; /* Puedes ajustar el valor según tus necesidades */
