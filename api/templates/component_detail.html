@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Detalles de {{ nombre_componente }}</h1>
-    <img src="{% static 'img/'|add:nombre_componente|add:'.jpg' %}" alt="{{ nombre_componente }}" width="200" height="150">
+    <img src="{% static 'imagenes/'|add:nombre_componente|add:'.jpg' %}" alt="{{ nombre_componente }}" width="200" height="150">
     <div class="description-container">
         <div class="description">
     <p>Descripción: {{ descripcion_wikipedia }}</p>
