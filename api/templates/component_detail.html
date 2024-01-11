@@ -16,7 +16,7 @@
 
     <p>Precio: $XX.XX</p>
 
-    <button onclick="descarga archivo">descargar archivo</button>
+    <button onclick="window.location.href='{% url 'download_pdf' component_name=nombre_componente %}'">Descargar Hoja de Datos</button>
     <a href="{% url 'inicio' %}">inicio</a>
     
 </body>
